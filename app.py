@@ -1,13 +1,13 @@
-# planner equal {
-#     peopleNum: “ ”,
-#     peopleArray : [ ],
-#     totalBills: “ ”,
-#     vfBillNum: “ ”,
-#     vfBillArray: [ ],
-#     fixedBillNum: “ ”,
-#     fixedBillArray: [ ]
-# }
-#
+ planner equal {
+     "peopleNum": “ ”,
+     "peopleArray" : [ ],
+     "totalBills" : “ ”,
+     "vfBillNum" : “ ”,
+    vfBillArray: [ ],
+     fixedBillNum: “ ”,
+     fixedBillArray: [ ]
+ }
+
 # Function input ()
 #     Ask user to enter how many people are paying bills
 #     Store input into planner.peopleNum
