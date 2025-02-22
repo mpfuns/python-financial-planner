@@ -9,6 +9,7 @@ planner = {
 
 def input():
     # asking about people who are  paying the bills information
+    #add check correct format  if it's a number
     planner["peopleNum"] = int(input("How many people are paying bills? "))
     if planner["peopleNum"] > 1:
         for i in range(planner["peopleNum"]):
@@ -19,8 +20,9 @@ def input():
                 "futurePeriods": []
             }
             personInfo["name"] = input(f"Enter person {i + 1} name: ")
-            personInfo["checkDate"] = input(f"Enter the date when {personInfo['name']} got their last paid check: ")
-            personInfo["checkAmount"] = input(f"Enter the amount of {personInfo['name']}'s check: ")
+            #add check correct format of date 
+            personInfo["checkDate"] = input(f"Enter the date when {personInfo['name']} got their last paid check(mm/dd/yyyy): ")
+            personInfo["checkAmount"] = input(f"Enter the amount of {personInfo['name']}'s check $: ")
             planner["peopleArray"].append(personInfo)
     else:
         personInfo = {
@@ -30,11 +32,14 @@ def input():
             "futurePeriods": []
         }   
         personInfo["name"] = input("Enter your name: ")
-        personInfo["checkDate"] = input("Enter the date when you got your last paid check: ")   
-        personInfo["checkAmount"] = input("Enter the amount of your check: ")
+        #add check correct format of date 
+        personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): ")   
+        personInfo["checkAmount"] = input("Enter the amount of your check $: ")
         planner["peopleArray"].append(personInfo)
-# asking about  bills     
+# asking about  bills  
+# add check correct format if it's a number   
     planner["totalBills"] = int(input("Enter the number of bills: "))
+    #add check correct format  if it's "yes" or "no"
     answerVfBills = input("Do you have any variable/fluctuate bills? (yes or no): ")
     if answerVfBills == "yes":
         planner["vfBillNum"] = int(input("Enter the number of variable/fluctuate bills: "))
@@ -46,7 +51,7 @@ def input():
                 "futurePeriods": []
             }
             billInfo["name"] = input(f"Enter variable/fluctuate bill {i + 1} name: ")
-            billInfo["billDate"] = input(f"Enter the date of the last due date for this bill: ")
+            billInfo["billDate"] = input(f"Enter the date of the last due date for this bill(mm/dd/yyyy): ")
             billInfo["billAmount"] = input(f"Enter the estimated amount of {billInfo['name']}: ")
             planner["vfBillArray"].append(billInfo)
     else:
@@ -60,8 +65,9 @@ def input():
             "futurePeriods": []
         }
         billInfo["name"] = input(f"Enter fixed bill {i + 1} name: ")
+        #add check correct format  if it's a number
         billInfo["billDay"] = input(f"Enter the day of the month this bill is due: ")
-        billInfo["billAmount"] = input(f"Enter the estimated or exact amount of {billInfo['name']}: ")
+        billInfo["billAmount"] = input(f"Enter the estimated or exact amount of {billInfo['name']} $: ")
         planner["fixedBillArray"].append(billInfo)
 
 def calculation():
