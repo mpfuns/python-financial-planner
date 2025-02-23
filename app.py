@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import re
 
 planner = {
      "peopleNum": "",
@@ -9,7 +10,10 @@ planner = {
      "fixedBillNum": "",
      "fixedBillArray": [] }
 
+# This function will help with getting the information from the user
 def input():
+    #this  variable will help with checking the correct format of the date
+    pattern = r"^\d{2}/\d{2}/\d{4}$"
     # asking about people who are  paying the bills information
     #add check correct format  if it's a number
     planner["peopleNum"] = int(input("How many people are paying bills? "))
@@ -21,12 +25,15 @@ def input():
                 "checkAmount": "",
                 "futurePeriods": []
             }
-            #add check to make sure name is  fill out 
-            personInfo["name"] = input(f"Enter person {i + 1} name: ")
+            #check to make sure name is not empty
+            while personInfo["name"] == "":
+                personInfo["name"] = input(f"Enter person {i + 1} name: ")
             #add check correct format of date 
-            personInfo["checkDate"] = input(f"Enter the date when {personInfo['name']} got their last paid check(mm/dd/yyyy): ")
-            #add check correct format  if it's a number
-            personInfo["checkAmount"] = input(f"Enter the amount of {personInfo['name']}'s check $: ")
+            while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == None:
+             personInfo["checkDate"] = input(f"Enter the date when {personInfo['name']} got their last paid check(mm/dd/yyyy): ")
+            #check to make sure the amount is a number
+            while personInfo["checkAmount"] == "" or personInfo["checkAmount"].isnumeric() == False:
+             personInfo["checkAmount"] = input(f"Enter the amount of {personInfo['name']}'s check $: ")
             planner["peopleArray"].append(personInfo)
     else:
         personInfo = {
@@ -35,21 +42,25 @@ def input():
             "checkAmount": "",
             "futurePeriods": []
         } 
-        #add check to make sure name is  fill out   
-        personInfo["name"] = input("Enter your name: ")
+        #check to make sure name is not empty
+        while personInfo["name"] == "":
+          personInfo["name"] = input("Enter your name: ")
         #add check correct format of date 
-        personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): ") 
-        #add check correct format  if it's a number
-        personInfo["checkAmount"] = input("Enter the amount of your check $: ")
+        while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == False:
+         personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): ") 
+        #check to make sure the amount is a number
+        while personInfo["checkAmount"] == "" or personInfo["checkAmount"].isnumeric() == False:
+         personInfo["checkAmount"] = input("Enter the amount of your check $: ")
         planner["peopleArray"].append(personInfo)
 # asking about  bills  
-# add check correct format if it's a number   
-    planner["totalBills"] = int(input("Enter the number of bills: "))
-    #add check correct format  if it's "yes" or "no"
-    answerVfBills = input("Do you have any variable/fluctuate bills? (yes or no): ")
-    if answerVfBills == "yes":
-        # add check correct format if it's a number  
-        planner["vfBillNum"] = int(input("Enter the number of variable/fluctuate bills: "))
+    # check correct format if it's a number   
+    while planner["totalBills"] == "" or planner["totalBills"].isnumeric() == False:
+     planner["totalBills"] = int(input("Enter the number of bills: "))
+    # check correct format if it's a number 
+    while planner["vfBillNum"] == "" or planner["vfBillNum"].isnumeric() == False:  
+     planner["vfBillNum"] = int(input("Enter the number of variable/fluctuate bills: "))
+    if planner["vfBillNum"] > 0:
+       
         for i in range(planner["vfBillNum"]):
             billInfo = {
                 "name": "",
@@ -57,16 +68,18 @@ def input():
                 "billAmount": "",
                 "futurePeriods": []
             }
-            #add check to make sure name is  fill out  
-            billInfo["name"] = input(f"Enter variable/fluctuate bill {i + 1} name: ")
-             #add check correct format of date
-            billInfo["billDate"] = input(f"Enter the date of the last due date for this bill(mm/dd/yyyy): ")
-            #add check correct format  if it's a number
-            billInfo["billAmount"] = input(f"Enter the estimated amount of {billInfo['name']}: ")
+            #check to make sure name is  fill out
+            while billInfo["name"] == "":  
+             billInfo["name"] = input(f"Enter variable/fluctuate bill {i + 1} name: ")
+            #add check correct format of date
+            while billInfo["billDate"] == "" or re.match(pattern, billInfo["billDate"]) == False:
+             billInfo["billDate"] = input(f"Enter the date of the last due date for this bill(mm/dd/yyyy): ")
+            #check correct format  if it's a number
+            while billInfo["billAmount"] == "" or billInfo["billAmount"].isnumeric() == False:
+             billInfo["billAmount"] = input(f"Enter the estimated amount of {billInfo['name']}: ")
             planner["vfBillArray"].append(billInfo)
     else:
-        planner["vfBillNum"] = 0
-    planner["fixedBillNum"] = planner["totalBills"] - planner["vfBillNum"]
+     planner["fixedBillNum"] = planner["totalBills"] - planner["vfBillNum"]
     for i in range(planner["fixedBillNum"]):
         billInfo = {
             "name": "",
@@ -75,11 +88,14 @@ def input():
             "futurePeriods": []
         }
         #add check to make sure name is  fill out
-        billInfo["name"] = input(f"Enter fixed bill {i + 1} name: ")
+        while billInfo["name"] == "":
+         billInfo["name"] = input(f"Enter fixed bill {i + 1} name: ")
         #add check correct format  if it's a number
-        billInfo["billDay"] = input(f"Enter the day of the month this bill is due: ")
+        while billInfo["billDay"] == "" or billInfo["billDay"].isnumeric() == False or int(billInfo["billDay"]) >= 31:
+         billInfo["billDay"] = input(f"Enter the day of the month this bill is due: ")
         #add check correct format  if it's a number
-        billInfo["billAmount"] = input(f"Enter the estimated or exact amount of {billInfo['name']} $: ")
+        while billInfo["billAmount"] == "" or billInfo["billAmount"].isnumeric() == False:
+         billInfo["billAmount"] = input(f"Enter the estimated or exact amount of {billInfo['name']} $: ")
         planner["fixedBillArray"].append(billInfo)
 
 def calculation():
@@ -92,7 +108,7 @@ def calculation():
             futureDate = formatPrevious + timedelta(days=14) 
             planner["peopleArray"][i]["futurePeriods"].append(futureDate)
             nextPeriod = futureDate
-    #the following code will help get the  future periods for the fixed  bills- need to fix the date
+    #the following code will help get the  future periods for the fixed  bills
     for i in range(planner["fixedBillNum"]):
         todayDate = datetime.today()
         todayMonth = todayDate.month
@@ -106,7 +122,7 @@ def calculation():
             futureBillDate = formatCurrent + timedelta(days=30)
             planner["fixedBillArray"][i]["futurePeriods"].append(futureBillDate)
             nextPeriod = futureBillDate
-   #the following code will help get the  future periods for the variable/fluctuate bills- - need to fix the date
+   #the following code will help get the  future periods for the variable/fluctuate bills
     for i in range(planner["vfBillNum"]):
         lastDate = planner["vfBillArray"][i]["billDate"]
         for j in range(11):
