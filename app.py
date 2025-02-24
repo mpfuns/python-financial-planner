@@ -11,7 +11,7 @@ planner = {
      "fixedBillArray": [] }
 
 # This function will help with getting the information from the user
-def input():
+def inputInformation():
     #this  variable will help with checking the correct format of the date
     pattern = r"^\d{2}/\d{2}/\d{4}$"
     # asking about people who are  paying the bills information
@@ -207,7 +207,7 @@ def calculation():
         displayOutput.append(periodLayout)
     return displayOutput
 def output():
-    input()
+    inputInformation()
     result= calculation()
     #putting  results in a file
     with open("output.txt", "w") as file:
