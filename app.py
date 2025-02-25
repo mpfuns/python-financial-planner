@@ -1,3 +1,4 @@
+from classesFunctions import NumberHandler
 from datetime import datetime, timedelta
 import re
 
@@ -16,8 +17,10 @@ def inputInformation():
     pattern = r"^\d{2}/\d{2}/\d{4}$"
     # asking about people who are  paying the bills information
     #add check correct format  if it's a number
-    planner["peopleNum"] = int(input("How many people are paying bills? "))
-    if planner["peopleNum"] > 1:
+    while planner["peopleNum"] == "" or planner["peopleNum"].isnumeric() == False:
+     planner["peopleNum"] = input("Number of people who are paying bills? : ")
+    
+    if int(planner["peopleNum"]) > 1:
         for i in range(planner["peopleNum"]):
             personInfo = {
                 "name": "",
@@ -46,7 +49,7 @@ def inputInformation():
         while personInfo["name"] == "":
           personInfo["name"] = input("Enter your name: ")
         #add check correct format of date 
-        while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == False:
+        while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == None:
          personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): ") 
         #check to make sure the amount is a number
         while personInfo["checkAmount"] == "" or personInfo["checkAmount"].isnumeric() == False:
@@ -55,11 +58,11 @@ def inputInformation():
 # asking about  bills  
     # check correct format if it's a number   
     while planner["totalBills"] == "" or planner["totalBills"].isnumeric() == False:
-     planner["totalBills"] = int(input("Enter the number of bills: "))
+     planner["totalBills"] = input("Enter the number of bills: ")
     # check correct format if it's a number 
     while planner["vfBillNum"] == "" or planner["vfBillNum"].isnumeric() == False:  
-     planner["vfBillNum"] = int(input("Enter the number of variable/fluctuate bills: "))
-    if planner["vfBillNum"] > 0:
+     planner["vfBillNum"] = input("Enter the number of variable/fluctuate bills: ")
+    if int(planner["vfBillNum"]) > 0:
        
         for i in range(planner["vfBillNum"]):
             billInfo = {
@@ -72,14 +75,14 @@ def inputInformation():
             while billInfo["name"] == "":  
              billInfo["name"] = input(f"Enter variable/fluctuate bill {i + 1} name: ")
             #add check correct format of date
-            while billInfo["billDate"] == "" or re.match(pattern, billInfo["billDate"]) == False:
+            while billInfo["billDate"] == "" or re.match(pattern, billInfo["billDate"]) == None:
              billInfo["billDate"] = input(f"Enter the date of the last due date for this bill(mm/dd/yyyy): ")
             #check correct format  if it's a number
             while billInfo["billAmount"] == "" or billInfo["billAmount"].isnumeric() == False:
              billInfo["billAmount"] = input(f"Enter the estimated amount of {billInfo['name']}: ")
             planner["vfBillArray"].append(billInfo)
     else:
-     planner["fixedBillNum"] = planner["totalBills"] - planner["vfBillNum"]
+     planner["fixedBillNum"] = int(planner["totalBills"]) - int(planner["vfBillNum"])
     for i in range(planner["fixedBillNum"]):
         billInfo = {
             "name": "",
@@ -126,17 +129,17 @@ def calculation():
     for i in range(planner["vfBillNum"]):
         lastDate = planner["vfBillArray"][i]["billDate"]
         for j in range(11):
-            range = {"min": " ", "middle": " ", "max": " "}
+            rangeSetup = {"min": " ", "middle": " ", "max": " "}
             nextDate = " "
             currentDate = nextDate != " " or lastDate
             formatCurrentDate = datetime.strptime(currentDate, "%m/%d/%Y")
             middleDate = formatCurrentDate + timedelta(days=30)
-            range["middle"] = middleDate
+            rangeSetup["middle"] = middleDate
             minDate = middleDate - timedelta(days=2)
-            range["min"] = minDate
+            rangeSetup["min"] = minDate
             maxDate = middleDate + timedelta(days=8) 
-            range["max"] = maxDate
-            planner["vfBillArray"][i]["futurePeriods"].append(range)
+            rangeSetup["max"] = maxDate
+            planner["vfBillArray"][i]["futurePeriods"].append(rangeSetup)
             nextDate = middleDate
     #the following code will help with organizing the checks
     allChecks = []
