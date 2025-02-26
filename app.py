@@ -20,41 +20,23 @@ def inputInformation():
     while planner["peopleNum"] == "" or planner["peopleNum"].isnumeric() == False:
      planner["peopleNum"] = input("Number of people who are paying bills? : ")
     
-    if int(planner["peopleNum"]) > 1:
-        for i in range(planner["peopleNum"]):
-            personInfo = {
+    for i in range(int(planner["peopleNum"])):
+        personInfo = {
                 "name": "",
                 "checkDate": "",
                 "checkAmount": "",
                 "futurePeriods": []
             }
-            #check to make sure name is not empty
-            while personInfo["name"] == "":
-                personInfo["name"] = input(f"Enter person {i + 1} name: ")
-            #add check correct format of date 
-            while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == None:
-             personInfo["checkDate"] = input(f"Enter the date when {personInfo['name']} got their last paid check(mm/dd/yyyy): ")
-            #check to make sure the amount is a number
-            while personInfo["checkAmount"] == "" or personInfo["checkAmount"].isnumeric() == False:
-             personInfo["checkAmount"] = input(f"Enter the amount of {personInfo['name']}'s check $: ")
-            planner["peopleArray"].append(personInfo)
-    else:
-        personInfo = {
-            "name": "",
-            "checkDate": "",
-            "checkAmount": "",
-            "futurePeriods": []
-        } 
         #check to make sure name is not empty
         while personInfo["name"] == "":
-          personInfo["name"] = input("Enter your name: ")
+            personInfo["name"] = input("Enter your name: " if int(planner["peopleNum"]) == 1  else f"Enter person {i + 1} name: ")
         #add check correct format of date 
         while personInfo["checkDate"] == "" or re.match(pattern, personInfo["checkDate"]) == None:
-         personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): ") 
-        #check to make sure the amount is a number
-        while personInfo["checkAmount"] == "" or personInfo["checkAmount"].isnumeric() == False:
-         personInfo["checkAmount"] = input("Enter the amount of your check $: ")
-        planner["peopleArray"].append(personInfo)
+            personInfo["checkDate"] = input("Enter the date when you got your last paid check(mm/dd/yyyy): "if int(planner["peopleNum"]) == 1  else f"Enter the date when {personInfo['name']} got their last paid check(mm/dd/yyyy): ")
+            #check to make sure the amount is a number
+        while personInfo["checkAmount"] == "" or not NumberHandler.is_number(personInfo["checkAmount"]):
+            personInfo["checkAmount"] = input("Enter the amount of your check $: " if int(planner["peopleNum"]) == 1  else f"Enter the amount of {personInfo['name']}'s check $: ")
+            planner["peopleArray"].append(personInfo)
 # asking about  bills  
     # check correct format if it's a number   
     while planner["totalBills"] == "" or planner["totalBills"].isnumeric() == False:
