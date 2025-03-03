@@ -107,9 +107,10 @@ def calculation():
         nextPeriod = ""
         for j in range(11):
             current = nextPeriod if nextPeriod != "" else standardBillDate
-            #bug is  here need to fix it
-            formatCurrent = current if type(current)=='str' else datetime.strptime(current, "%m/%d/%Y")
+            
+            formatCurrent =  if type(current).__name__=='str' else current.strftime("%m/%d/%Y")
             print(formatCurrent)
+            #bug is  here need to fix it
             futureBillDate = formatCurrent + timedelta(days=30)
             planner["fixedBillArray"][i]["futurePeriods"].append(futureBillDate)
             nextPeriod = futureBillDate
