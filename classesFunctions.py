@@ -1,10 +1,10 @@
 class NumberHandler:
-    def __init__(self, value):
-        self.value = value
-
-    def is_number(self):
+   
+    def is_number(s):
         try:
-            float(self.value)
+            withoutCommaList= s.split(",")
+            numberTogether= "".join(withoutCommaList)
+            float(numberTogether)
             return True
         except ValueError:
             return False

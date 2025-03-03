@@ -46,7 +46,7 @@ def inputInformation():
      planner["vfBillNum"] = input("Enter the number of variable/fluctuate bills: ")
     if int(planner["vfBillNum"]) > 0:
        
-        for i in range(planner["vfBillNum"]):
+        for i in range(int(planner["vfBillNum"])):
             billInfo = {
                 "name": "",
                 "billDate": "",
@@ -60,12 +60,12 @@ def inputInformation():
             while billInfo["billDate"] == "" or re.match(pattern, billInfo["billDate"]) == None:
              billInfo["billDate"] = input(f"Enter the date of the last due date for this bill(mm/dd/yyyy): ")
             #check correct format  if it's a number
-            while billInfo["billAmount"] == "" or billInfo["billAmount"].isnumeric() == False:
+            while billInfo["billAmount"] == "" or not NumberHandler.is_number(billInfo["billAmount"]):
              billInfo["billAmount"] = input(f"Enter the estimated amount of {billInfo['name']}: ")
             planner["vfBillArray"].append(billInfo)
-    else:
-     planner["fixedBillNum"] = int(planner["totalBills"]) - int(planner["vfBillNum"])
-    for i in range(planner["fixedBillNum"]):
+    
+    planner["fixedBillNum"] = int(planner["totalBills"]) - int(planner["vfBillNum"])
+    for i in range(int(planner["fixedBillNum"])):
         billInfo = {
             "name": "",
             "billDay": "",
@@ -79,7 +79,7 @@ def inputInformation():
         while billInfo["billDay"] == "" or billInfo["billDay"].isnumeric() == False or int(billInfo["billDay"]) >= 31:
          billInfo["billDay"] = input(f"Enter the day of the month this bill is due: ")
         #add check correct format  if it's a number
-        while billInfo["billAmount"] == "" or billInfo["billAmount"].isnumeric() == False:
+        while billInfo["billAmount"] == "" or not NumberHandler.is_number(billInfo["billAmount"]):
          billInfo["billAmount"] = input(f"Enter the estimated or exact amount of {billInfo['name']} $: ")
         planner["fixedBillArray"].append(billInfo)
 
@@ -94,7 +94,7 @@ def calculation():
             planner["peopleArray"][i]["futurePeriods"].append(futureDate)
             nextPeriod = futureDate
     #the following code will help get the  future periods for the fixed  bills
-    for i in range(planner["fixedBillNum"]):
+    for i in range(int(planner["fixedBillNum"])):
         todayDate = datetime.today()
         todayMonth = todayDate.month
         todayYear = todayDate.year
@@ -108,7 +108,7 @@ def calculation():
             planner["fixedBillArray"][i]["futurePeriods"].append(futureBillDate)
             nextPeriod = futureBillDate
    #the following code will help get the  future periods for the variable/fluctuate bills
-    for i in range(planner["vfBillNum"]):
+    for i in range(int(planner["vfBillNum"])):
         lastDate = planner["vfBillArray"][i]["billDate"]
         for j in range(11):
             rangeSetup = {"min": " ", "middle": " ", "max": " "}
