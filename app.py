@@ -103,15 +103,14 @@ def calculation():
         day = planner['fixedBillArray'][i]['billDay']
         day = day if int(day) > 9 else f'0{day}'
         standardBillDate = f"{month}/{day}/{todayYear}"
-        planner["fixedBillArray"][i]["futurePeriods"].append(standardBillDate)
         nextPeriod = ""
-        for j in range(11):
+        for j in range(12):
             current = nextPeriod if nextPeriod != "" else standardBillDate
-            formatCurrent = current if isinstance(current, str) else current.strftime("%m/%d/%Y")
-            print(formatCurrent)
-            #bug is  here need to fix it
-            futureBillDate = datetime.strptime(formatCurrent, "%m/%d/%Y") + timedelta(days=30)
-            print(futureBillDate)
+            startDate = datetime.strptime(current, "%m/%d/%Y")
+            nextMonth =(startDate.month + j -1) % 12 + 1
+            nextYear = startDate.year + ((startDate.month + j -1) // 12)
+            monthWithZero = nextMonth if nextMonth > 9 else f'0{nextMonth}'
+            futureBillDate = f"{monthWithZero}/{day}/{nextYear}"
             planner["fixedBillArray"][i]["futurePeriods"].append(futureBillDate)
             nextPeriod = futureBillDate
    #the following code will help get the  future periods for the variable/fluctuate bills
