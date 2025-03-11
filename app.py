@@ -107,8 +107,11 @@ def calculation():
         for j in range(12):
             current = nextPeriod if nextPeriod != "" else standardBillDate
             startDate = datetime.strptime(current, "%m/%d/%Y")
-            nextMonth =(startDate.month + j -1) % 12 + 1
-            nextYear = startDate.year + ((startDate.month + j -1) // 12)
+            nextMonth = startDate.month if j == 0 else (startDate.month + 1)
+            nextYear = startDate.year
+            if nextMonth > 12:
+                nextMonth = 1
+                nextYear = startDate.year + 1
             monthWithZero = nextMonth if nextMonth > 9 else f'0{nextMonth}'
             futureBillDate = f"{monthWithZero}/{day}/{nextYear}"
             planner["fixedBillArray"][i]["futurePeriods"].append(futureBillDate)
