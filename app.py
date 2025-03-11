@@ -119,25 +119,24 @@ def calculation():
    #the following code will help get the  future periods for the variable/fluctuate bills
     for i in range(int(planner["vfBillNum"])):
         lastDate = planner["vfBillArray"][i]["billDate"]
-        nextDate = " "
+        nextDate = ""
         for j in range(11):
-            rangeSetup = {"min": " ", "middle": " ", "max": " "}
+            rangeSetup = {"min": "", "middle": "", "max": ""}
             currentDate = nextDate if nextDate !="" else lastDate
-            
             formatCurrentDate = datetime.strptime(currentDate, "%m/%d/%Y")
             middleDate = formatCurrentDate + timedelta(days=30)
-            rangeSetup["middle"] = middleDate
+            rangeSetup["middle"] = middleDate.strftime("%m/%d/%Y")
             minDate = middleDate - timedelta(days=2)
-            rangeSetup["min"] = minDate
+            rangeSetup["min"] = minDate.strftime("%m/%d/%Y")
             maxDate = middleDate + timedelta(days=8) 
-            rangeSetup["max"] = maxDate
+            rangeSetup["max"] = maxDate.strftime("%m/%d/%Y")
             planner["vfBillArray"][i]["futurePeriods"].append(rangeSetup)
-            nextDate = middleDate
+            nextDate = middleDate.strftime("%m/%d/%Y")
     #the following code will help with organizing the checks
     allChecks = []
     for i in range(len(planner["peopleArray"])):
         for j in range(len(planner["peopleArray"][i]["futurePeriods"])):
-            checkLayout = {"name": " ", "date": " ", "amount": " "}
+            checkLayout = {"name": "", "date": "", "amount": ""}
             checkLayout["name"] = planner["peopleArray"][i]["name"]
             checkLayout["date"] = planner["peopleArray"][i]["futurePeriods"][j]
             checkLayout["amount"] = planner["peopleArray"][i]["checkAmount"]
@@ -159,6 +158,7 @@ def calculation():
             billLayout["date"] = planner["vfBillArray"][i]["futurePeriods"][j]
             billLayout["amount"] = planner["vfBillArray"][i]["billAmount"]
             allBills.append(billLayout)
+   #bug is  here 
     organizedBills = sorted(allBills, key=lambda x: x["date"])
     # This loop will help with displaying the information in the correct format for  the file
     displayOutput = []
