@@ -209,14 +209,17 @@ def calculation():
         displayOutput.append(periodLayout)
     return displayOutput
 def output():
+    
     inputInformation()
     result= calculation()
     #putting  results in a file
     with open("output.txt", "w") as file:
-        file.write(f"Todays date: {datetime.today().strftime('%m/%d/%Y')}\n\n")
+        file.write(f"Financial Planner Todays date: {datetime.today().strftime('%m/%d/%Y')}\n\n")
         file.write("**Variable/fluctuate bills Minimum Days Between Bills are 28 days and the Maximum Days Between Bills are 35 days.**\n ***Rare Extremes are 15 days(starting or ending services) and 45 days(In unusual circumstances, such as major system overhauls or natural disasters) between bills.***\n\n")
         for i in range(len(result)):
-            file.write(f"Check for {result[i]['check']['name']} on {result[i]['check']['date']} amount:${result[i]['check']['amount']}\n")
+            file.write("___________________________________________")
+            file.write("Check " if int(planner["peopleNum"]) == 1 else f"Check for {result[i]['check']['name']} ")
+            file.write(f"on {result[i]['check']['date']} amount:${result[i]['check']['amount']}\n")
             for j in range(len(result[i]['bills'])):
                 if result[i]['bills'][j]['type'] == "variable/fluctuate":
                     file.write(f"Variable/fluctuate bill:{result[i]['bills'][j]['name']} between {result[i]['bills'][j]['date']['min']}-{result[i]['bills'][j]['date']['max']} amount:${result[i]['bills'][j]['amount']}\n{result[i]['bills'][j]['note']}\n")
