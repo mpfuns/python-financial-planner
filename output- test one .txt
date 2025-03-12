@@ -1,0 +1,126 @@
+Check for ted on 03/11/2025 amount 1200
+Variable/fluctuate bill water on {'min': '03/15/2025', 'middle': '03/17/2025', 'max': '03/25/2025', 'compare': datetime.datetime(2025, 3, 15, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 03/25/2025 amount 1200
+Fixed bill Rent  on {'format': '04/05/2025', 'compare': datetime.datetime(2025, 4, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 04/08/2025 amount 1200
+Variable/fluctuate bill water on {'min': '04/14/2025', 'middle': '04/16/2025', 'max': '04/24/2025', 'compare': datetime.datetime(2025, 4, 14, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 04/22/2025 amount 1200
+Fixed bill Rent  on {'format': '05/05/2025', 'compare': datetime.datetime(2025, 5, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 05/06/2025 amount 1200
+Variable/fluctuate bill water on {'min': '05/14/2025', 'middle': '05/16/2025', 'max': '05/24/2025', 'compare': datetime.datetime(2025, 5, 14, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 05/20/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 06/03/2025 amount 1200
+Fixed bill Rent  on {'format': '06/05/2025', 'compare': datetime.datetime(2025, 6, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Variable/fluctuate bill water on {'min': '06/13/2025', 'middle': '06/15/2025', 'max': '06/23/2025', 'compare': datetime.datetime(2025, 6, 13, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 06/17/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 07/01/2025 amount 1200
+Fixed bill Rent  on {'format': '07/05/2025', 'compare': datetime.datetime(2025, 7, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Variable/fluctuate bill water on {'min': '07/13/2025', 'middle': '07/15/2025', 'max': '07/23/2025', 'compare': datetime.datetime(2025, 7, 13, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 07/15/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 07/29/2025 amount 1200
+Fixed bill Rent  on {'format': '08/05/2025', 'compare': datetime.datetime(2025, 8, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 08/12/2025 amount 1200
+Variable/fluctuate bill water on {'min': '08/12/2025', 'middle': '08/14/2025', 'max': '08/22/2025', 'compare': datetime.datetime(2025, 8, 12, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 08/26/2025 amount 1200
+Fixed bill Rent  on {'format': '09/05/2025', 'compare': datetime.datetime(2025, 9, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 09/09/2025 amount 1200
+Variable/fluctuate bill water on {'min': '09/11/2025', 'middle': '09/13/2025', 'max': '09/21/2025', 'compare': datetime.datetime(2025, 9, 11, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 09/23/2025 amount 1200
+Fixed bill Rent  on {'format': '10/05/2025', 'compare': datetime.datetime(2025, 10, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 10/07/2025 amount 1200
+Variable/fluctuate bill water on {'min': '10/11/2025', 'middle': '10/13/2025', 'max': '10/21/2025', 'compare': datetime.datetime(2025, 10, 11, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 10/21/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 11/04/2025 amount 1200
+Fixed bill Rent  on {'format': '11/05/2025', 'compare': datetime.datetime(2025, 11, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Variable/fluctuate bill water on {'min': '11/10/2025', 'middle': '11/12/2025', 'max': '11/20/2025', 'compare': datetime.datetime(2025, 11, 10, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 11/18/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 12/02/2025 amount 1200
+Fixed bill Rent  on {'format': '12/05/2025', 'compare': datetime.datetime(2025, 12, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Variable/fluctuate bill water on {'min': '12/10/2025', 'middle': '12/12/2025', 'max': '12/20/2025', 'compare': datetime.datetime(2025, 12, 10, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 12/16/2025 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 12/30/2025 amount 1200
+Fixed bill Rent  on {'format': '01/05/2026', 'compare': datetime.datetime(2026, 1, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Variable/fluctuate bill water on {'min': '01/09/2026', 'middle': '01/11/2026', 'max': '01/19/2026', 'compare': datetime.datetime(2026, 1, 9, 0, 0)} amount 200  
+Total bills: 200
+Over amount:  
+
+Check for ted on 01/13/2026 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 01/27/2026 amount 1200
+Fixed bill Rent  on {'format': '02/05/2026', 'compare': datetime.datetime(2026, 2, 5, 0, 0)} amount 1300 this bill will take all or most of your check, you will have to split this amount in smaller chunks
+Total bills: 0
+Over amount:  
+
+Check for ted on 02/10/2026 amount 1200
+Total bills: 0
+Over amount:  
+
+Check for ted on 02/24/2026 amount 1200
+Total bills: 0
+Over amount:  
+

@@ -1,0 +1,205 @@
+Todays date: 03/11/2025
+
+**Variable/fluctuate bills Minimum Days Between Bills are 28 days and the Maximum Days Between Bills are 35 days.**
+ ***Rare Extremes are 15 days(starting or ending services) and 45 days(In unusual circumstances, such as major system overhauls or natural disasters) between bills.***
+
+Check for ted on 03/11/2025 amount:$1200
+Variable/fluctuate bill:water between 03/15/2025-03/25/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 03/25/2025 amount:$1200
+Fixed bill:rent on 04/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 04/08/2025 amount:$1200
+Variable/fluctuate bill:water between 04/14/2025-04/24/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 04/22/2025 amount:$1200
+Fixed bill:rent on 05/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 05/06/2025 amount:$1200
+Variable/fluctuate bill:water between 05/14/2025-05/24/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 05/20/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 06/03/2025 amount:$1200
+Fixed bill:rent on 06/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Variable/fluctuate bill:water between 06/13/2025-06/23/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 06/17/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 07/01/2025 amount:$1200
+Fixed bill:rent on 07/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Variable/fluctuate bill:water between 07/13/2025-07/23/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 07/15/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 07/29/2025 amount:$1200
+Fixed bill:rent on 08/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 08/12/2025 amount:$1200
+Variable/fluctuate bill:water between 08/12/2025-08/22/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 08/26/2025 amount:$1200
+Fixed bill:rent on 09/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 09/09/2025 amount:$1200
+Variable/fluctuate bill:water between 09/11/2025-09/21/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 09/23/2025 amount:$1200
+Fixed bill:rent on 10/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 10/07/2025 amount:$1200
+Variable/fluctuate bill:water between 10/11/2025-10/21/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 10/21/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 11/04/2025 amount:$1200
+Fixed bill:rent on 11/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Variable/fluctuate bill:water between 11/10/2025-11/20/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 11/18/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 12/02/2025 amount:$1200
+Fixed bill:rent on 12/05/2025 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Variable/fluctuate bill:water between 12/10/2025-12/20/2025 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 12/16/2025 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 12/30/2025 amount:$1200
+Fixed bill:rent on 01/05/2026 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Variable/fluctuate bill:water between 01/09/2026-01/19/2026 amount:$200
+ 
+Total bills: 200
+Over amount: none
+___________________________________________
+
+
+Check for ted on 01/13/2026 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 01/27/2026 amount:$1200
+Fixed bill:rent on 02/05/2026 amount:$1300
+---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 02/10/2026 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
+Check for ted on 02/24/2026 amount:$1200
+Total bills: 0
+Over amount: none
+___________________________________________
+
+
