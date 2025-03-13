@@ -40,10 +40,10 @@ def inputInformation():
 # asking about  bills  
     # check correct format if it's a number   
     while planner["totalBills"] == "" or planner["totalBills"].isnumeric() == False:
-     planner["totalBills"] = input("Enter the number of bills:")
+     planner["totalBills"] = input("Enter the number of total bills:")
     # check correct format if it's a number 
-    while planner["vfBillNum"] == "" or planner["vfBillNum"].isnumeric() == False:  
-     planner["vfBillNum"] = input("Enter the number of variable/fluctuate bills:")
+    while planner["vfBillNum"] == "" or planner["vfBillNum"].isnumeric() == False or int(planner["vfBillNum"]) > int(planner["totalBills"]):  
+     planner["vfBillNum"] = input("Enter the number of variable/fluctuate bills(can't be over the total bills):")
     if int(planner["vfBillNum"]) > 0:
        
         for i in range(int(planner["vfBillNum"])):
@@ -185,22 +185,22 @@ def calculation():
                     vfBillDetail["name"] = organizedBills[j]["name"]
                     vfBillDetail["date"] = organizedBills[j]["date"]
                     vfBillDetail["amount"] = organizedBills[j]["amount"]
-                    if int(organizedBills[j]["amount"]) >= 0.5 * int(organizedChecks[i]["amount"]):
+                    if float(organizedBills[j]["amount"]) >= 0.5 * float(organizedChecks[i]["amount"]):
                         vfBillDetail["note"] = "---this bill will take all or most of your check, you will have to split this amount in smaller chunks---"
                         periodLayout["bills"].append(vfBillDetail)
                     else:
-                        totalBillAmount +=  int(organizedBills[j]["amount"])
+                        totalBillAmount +=  float(organizedBills[j]["amount"])
                         periodLayout["bills"].append(vfBillDetail)
             else:
                 if organizedBills[j]["date"]["compare"] >= organizedChecks[i]["date"]["compare"] and organizedBills[j]["date"]["compare"] < organizedChecks[i + 1]["date"]["compare"]:
                     fixedbillDetail["name"] = organizedBills[j]["name"]
                     fixedbillDetail["date"] = organizedBills[j]["date"]["format"]
                     fixedbillDetail["amount"] = organizedBills[j]["amount"]
-                    if int(organizedBills[j]["amount"]) >= 0.5 * int(organizedChecks[i]["amount"]):
+                    if float(organizedBills[j]["amount"]) >= 0.5 * float(organizedChecks[i]["amount"]):
                         fixedbillDetail["note"] = "---this bill will take all or most of your check, you will have to split this amount in smaller chunks---"
                         periodLayout["bills"].append(fixedbillDetail)
                     else:
-                        totalBillAmount += int(organizedBills[j]["amount"])
+                        totalBillAmount += float(organizedBills[j]["amount"])
                         periodLayout["bills"].append(fixedbillDetail)
         periodLayout["totalBills"] = totalBillAmount
         over = maxAmount - totalBillAmount
@@ -209,11 +209,18 @@ def calculation():
         displayOutput.append(periodLayout)
     return displayOutput
 def output():
-    
-    inputInformation()
-    result= calculation()
-    #putting  results in a file
-    with open("output.txt", "w") as file:
+    userAnswer = ""
+    while userAnswer.lower() != "exit" and userAnswer.lower() != "enter":
+     userinput = input("Welcome to the Financial Planner\n_________________________________________________________\nThis program will help you organize your bills and checks.\nThis program will ask some questions so please gather all of your bills and information.\nIf you want to look at an example of the output please look at the sample.txt file.\nPlease follow the instructions below.\nWhen entering the date please use the following format: mm/dd/yyyy\nWhen entering the amount please use numbers only.\n_________________________________________________________\nTo continue type enter or type exit to leave the program:")
+     userAnswer = userinput
+     print(userAnswer)
+    if userAnswer.lower() == "exit":
+        return
+    else:
+     inputInformation()
+     result= calculation()
+     #putting  results in a file
+     with open("output.txt", "w") as file:
         file.write(f"Financial Planner Todays date: {datetime.today().strftime('%m/%d/%Y')}\n\n")
         file.write("**Variable/fluctuate bills Minimum Days Between Bills are 28 days and the Maximum Days Between Bills are 35 days.**\n ***Rare Extremes are 15 days(starting or ending services) and 45 days(In unusual circumstances, such as major system overhauls or natural disasters) between bills.***\n\n")
         for i in range(len(result)):
