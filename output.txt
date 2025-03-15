@@ -1,0 +1,5 @@
+Financial Planner Todays date: 03/15/2025
+
+**Variable/fluctuate bills Minimum Days Between Bills are 28 days and the Maximum Days Between Bills are 35 days.**
+ ***Rare Extremes are 15 days(starting or ending services) and 45 days(In unusual circumstances, such as major system overhauls or natural disasters) between bills.***
+

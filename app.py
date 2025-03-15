@@ -14,7 +14,7 @@ planner = {
 # This function will help with getting the information from the user
 def inputInformation():
     #this  variable will help with checking the correct format of the date
-    pattern = r"^\d{2}/\d{2}/\d{4}$"
+    pattern = r"^(0[1-9]|1[0-2])/([0-2][0-9]|3[0-1])/(\d{4})$"
     # asking about people who are  paying the bills information
     #add check correct format  if it's a number
     while planner["peopleNum"] == "" or planner["peopleNum"].isnumeric() == False:
@@ -171,7 +171,7 @@ def calculation():
     displayOutput = []
     for i in range(len(organizedChecks)):
         totalBillAmount = 0
-        maxAmount = int(organizedChecks[i]["amount"])
+        maxAmount = float(organizedChecks[i]["amount"])
         periodLayout = {"check": {"name": " ", "date": " ", "amount": " "}, "bills": [], "totalBills": " ", "overAmount": "none"}
         periodLayout["check"]["name"] = organizedChecks[i]["name"]
         periodLayout["check"]["date"] = organizedChecks[i]["date"]["format"]
@@ -191,6 +191,7 @@ def calculation():
                     else:
                         totalBillAmount +=  float(organizedBills[j]["amount"])
                         periodLayout["bills"].append(vfBillDetail)
+            
             else:
                 if organizedBills[j]["date"]["compare"] >= organizedChecks[i]["date"]["compare"] and organizedBills[j]["date"]["compare"] < organizedChecks[i + 1]["date"]["compare"]:
                     fixedbillDetail["name"] = organizedBills[j]["name"]
@@ -202,6 +203,8 @@ def calculation():
                     else:
                         totalBillAmount += float(organizedBills[j]["amount"])
                         periodLayout["bills"].append(fixedbillDetail)
+                else:
+                    continue
         periodLayout["totalBills"] = totalBillAmount
         over = maxAmount - totalBillAmount
         if over < 0:
@@ -213,7 +216,6 @@ def output():
     while userAnswer.lower() != "exit" and userAnswer.lower() != "enter":
      userinput = input("Welcome to the Financial Planner\n_________________________________________________________\nThis program will help you organize your bills and checks.\nThis program will ask some questions so please gather all of your bills and information.\nIf you want to look at an example of the output please look at the sample.txt file.\nPlease follow the instructions below.\nWhen entering the date please use the following format: mm/dd/yyyy\nWhen entering the amount please use numbers only.\n_________________________________________________________\nTo continue type enter or type exit to leave the program:")
      userAnswer = userinput
-     print(userAnswer)
     if userAnswer.lower() == "exit":
         return
     else:
