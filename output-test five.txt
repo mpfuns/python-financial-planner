@@ -3,7 +3,7 @@ Financial Planner Todays date: 03/16/2025
 **Variable/fluctuate bills Minimum Days Between Bills are 28 days and the Maximum Days Between Bills are 35 days.**
  ***Rare Extremes are 15 days(starting or ending services) and 45 days(In unusual circumstances, such as major system overhauls or natural disasters) between bills.***
 
-___________________________________________Check for Person A on 03/06/2025 amount:$1250
+___________________________________________Check for person A on 03/06/2025 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -17,7 +17,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 03/20/2025 amount:$1250
+___________________________________________Check for person A on 03/20/2025 amount:$1250
 Variable/fluctuate bill:gas between 03/20/2025-03/30/2025 amount:$150
  
 Total bills: 150.0
@@ -28,15 +28,15 @@ ___________________________________________
 ___________________________________________Check for Person B on 03/26/2025 amount:$1300
 Fixed bill:hulu on 03/27/2025 amount:$14.99
  
-Fixed bill:spotify  on 04/01/2025 amount:$10
+Fixed bill:spotify on 04/01/2025 amount:$10
  
-Total bills: 24.99
+Total bills: 24.990000000000002
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 04/03/2025 amount:$1250
-Fixed bill:rent  on 04/04/2025 amount:$1300
+___________________________________________Check for person A on 04/03/2025 amount:$1250
+Fixed bill:rent on 04/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
@@ -49,7 +49,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 04/17/2025 amount:$1250
+___________________________________________Check for person A on 04/17/2025 amount:$1250
 Variable/fluctuate bill:Water  between 04/17/2025-04/27/2025 amount:$300
  
 Variable/fluctuate bill:gas between 04/19/2025-04/29/2025 amount:$150
@@ -67,10 +67,10 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 05/01/2025 amount:$1250
-Fixed bill:spotify  on 05/01/2025 amount:$10
+___________________________________________Check for person A on 05/01/2025 amount:$1250
+Fixed bill:spotify on 05/01/2025 amount:$10
  
-Fixed bill:rent  on 05/04/2025 amount:$1300
+Fixed bill:rent on 05/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 10.0
 Over amount: none
@@ -83,7 +83,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 05/15/2025 amount:$1250
+___________________________________________Check for person A on 05/15/2025 amount:$1250
 Variable/fluctuate bill:Water  between 05/17/2025-05/27/2025 amount:$300
  
 Variable/fluctuate bill:gas between 05/19/2025-05/29/2025 amount:$150
@@ -101,8 +101,8 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 05/29/2025 amount:$1250
-Fixed bill:spotify  on 06/01/2025 amount:$10
+___________________________________________Check for person A on 05/29/2025 amount:$1250
+Fixed bill:spotify on 06/01/2025 amount:$10
  
 Total bills: 10.0
 Over amount: none
@@ -110,14 +110,14 @@ ___________________________________________
 
 
 ___________________________________________Check for Person B on 06/04/2025 amount:$1300
-Fixed bill:rent  on 06/04/2025 amount:$1300
+Fixed bill:rent on 06/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 06/12/2025 amount:$1250
+___________________________________________Check for person A on 06/12/2025 amount:$1250
 Variable/fluctuate bill:Water  between 06/16/2025-06/26/2025 amount:$300
  
 Total bills: 300.0
@@ -133,25 +133,25 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 06/26/2025 amount:$1250
+___________________________________________Check for person A on 06/26/2025 amount:$1250
 Fixed bill:hulu on 06/27/2025 amount:$14.99
  
-Fixed bill:spotify  on 07/01/2025 amount:$10
+Fixed bill:spotify on 07/01/2025 amount:$10
  
-Total bills: 24.99
+Total bills: 24.990000000000002
 Over amount: none
 ___________________________________________
 
 
 ___________________________________________Check for Person B on 07/02/2025 amount:$1300
-Fixed bill:rent  on 07/04/2025 amount:$1300
+Fixed bill:rent on 07/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 07/10/2025 amount:$1250
+___________________________________________Check for person A on 07/10/2025 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -167,7 +167,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 07/24/2025 amount:$1250
+___________________________________________Check for person A on 07/24/2025 amount:$1250
 Fixed bill:hulu on 07/27/2025 amount:$14.99
  
 Total bills: 14.99
@@ -176,16 +176,16 @@ ___________________________________________
 
 
 ___________________________________________Check for Person B on 07/30/2025 amount:$1300
-Fixed bill:spotify  on 08/01/2025 amount:$10
+Fixed bill:spotify on 08/01/2025 amount:$10
  
-Fixed bill:rent  on 08/04/2025 amount:$1300
+Fixed bill:rent on 08/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 10.0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 08/07/2025 amount:$1250
+___________________________________________Check for person A on 08/07/2025 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -201,7 +201,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 08/21/2025 amount:$1250
+___________________________________________Check for person A on 08/21/2025 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -210,15 +210,15 @@ ___________________________________________
 ___________________________________________Check for Person B on 08/27/2025 amount:$1300
 Fixed bill:hulu on 08/27/2025 amount:$14.99
  
-Fixed bill:spotify  on 09/01/2025 amount:$10
+Fixed bill:spotify on 09/01/2025 amount:$10
  
-Total bills: 24.99
+Total bills: 24.990000000000002
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 09/04/2025 amount:$1250
-Fixed bill:rent  on 09/04/2025 amount:$1300
+___________________________________________Check for person A on 09/04/2025 amount:$1250
+Fixed bill:rent on 09/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
@@ -235,7 +235,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 09/18/2025 amount:$1250
+___________________________________________Check for person A on 09/18/2025 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -244,15 +244,15 @@ ___________________________________________
 ___________________________________________Check for Person B on 09/24/2025 amount:$1300
 Fixed bill:hulu on 09/27/2025 amount:$14.99
  
-Fixed bill:spotify  on 10/01/2025 amount:$10
+Fixed bill:spotify on 10/01/2025 amount:$10
  
-Total bills: 24.99
+Total bills: 24.990000000000002
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 10/02/2025 amount:$1250
-Fixed bill:rent  on 10/04/2025 amount:$1300
+___________________________________________Check for person A on 10/02/2025 amount:$1250
+Fixed bill:rent on 10/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
@@ -267,7 +267,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 10/16/2025 amount:$1250
+___________________________________________Check for person A on 10/16/2025 amount:$1250
 Variable/fluctuate bill:gas between 10/16/2025-10/26/2025 amount:$150
  
 Total bills: 150.0
@@ -283,10 +283,10 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 10/30/2025 amount:$1250
-Fixed bill:spotify  on 11/01/2025 amount:$10
+___________________________________________Check for person A on 10/30/2025 amount:$1250
+Fixed bill:spotify on 11/01/2025 amount:$10
  
-Fixed bill:rent  on 11/04/2025 amount:$1300
+Fixed bill:rent on 11/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 10.0
 Over amount: none
@@ -299,7 +299,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 11/13/2025 amount:$1250
+___________________________________________Check for person A on 11/13/2025 amount:$1250
 Variable/fluctuate bill:Water  between 11/13/2025-11/23/2025 amount:$300
  
 Variable/fluctuate bill:gas between 11/15/2025-11/25/2025 amount:$150
@@ -315,25 +315,25 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 11/27/2025 amount:$1250
+___________________________________________Check for person A on 11/27/2025 amount:$1250
 Fixed bill:hulu on 11/27/2025 amount:$14.99
  
-Fixed bill:spotify  on 12/01/2025 amount:$10
+Fixed bill:spotify on 12/01/2025 amount:$10
  
-Total bills: 24.99
+Total bills: 24.990000000000002
 Over amount: none
 ___________________________________________
 
 
 ___________________________________________Check for Person B on 12/03/2025 amount:$1300
-Fixed bill:rent  on 12/04/2025 amount:$1300
+Fixed bill:rent on 12/04/2025 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 12/11/2025 amount:$1250
+___________________________________________Check for person A on 12/11/2025 amount:$1250
 Variable/fluctuate bill:Water  between 12/13/2025-12/23/2025 amount:$300
  
 Variable/fluctuate bill:gas between 12/15/2025-12/25/2025 amount:$150
@@ -349,7 +349,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 12/25/2025 amount:$1250
+___________________________________________Check for person A on 12/25/2025 amount:$1250
 Fixed bill:hulu on 12/27/2025 amount:$14.99
  
 Total bills: 14.99
@@ -358,16 +358,16 @@ ___________________________________________
 
 
 ___________________________________________Check for Person B on 12/31/2025 amount:$1300
-Fixed bill:spotify  on 01/01/2026 amount:$10
+Fixed bill:spotify on 01/01/2026 amount:$10
  
-Fixed bill:rent  on 01/04/2026 amount:$1300
+Fixed bill:rent on 01/04/2026 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 10.0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 01/08/2026 amount:$1250
+___________________________________________Check for person A on 01/08/2026 amount:$1250
 Variable/fluctuate bill:Water  between 01/12/2026-01/22/2026 amount:$300
  
 Total bills: 300.0
@@ -383,7 +383,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 01/22/2026 amount:$1250
+___________________________________________Check for person A on 01/22/2026 amount:$1250
 Fixed bill:hulu on 01/27/2026 amount:$14.99
  
 Total bills: 14.99
@@ -392,16 +392,16 @@ ___________________________________________
 
 
 ___________________________________________Check for Person B on 01/28/2026 amount:$1300
-Fixed bill:spotify  on 02/01/2026 amount:$10
+Fixed bill:spotify on 02/01/2026 amount:$10
  
-Fixed bill:rent  on 02/04/2026 amount:$1300
+Fixed bill:rent on 02/04/2026 amount:$1300
 ---this bill will take all or most of your check, you will have to split this amount in smaller chunks---
 Total bills: 10.0
 Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 02/05/2026 amount:$1250
+___________________________________________Check for person A on 02/05/2026 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
@@ -413,7 +413,7 @@ Over amount: none
 ___________________________________________
 
 
-___________________________________________Check for Person A on 02/19/2026 amount:$1250
+___________________________________________Check for person A on 02/19/2026 amount:$1250
 Total bills: 0
 Over amount: none
 ___________________________________________
