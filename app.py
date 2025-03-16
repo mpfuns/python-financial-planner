@@ -120,7 +120,7 @@ def calculation():
         month = todayMonth if todayMonth > 9 else f'0{todayMonth}'
         day = planner['fixedBillArray'][i]['billDay']
        # this  day variable will help with getting the correct format of the day
-        day = day if int(day) > 9 else f'0{day}'
+        day = int(day) if int(day) > 9 else f'0{int(day)}'
         # this  standardBillDate variable will help with getting the correct format of the date
         standardBillDate = f"{month}/{day}/{todayYear}"
         # this nextPeriod variable is a placeholder for the next period
@@ -289,7 +289,7 @@ def output():
                 else:
                     file.write(f"Fixed bill:{result[i]['bills'][j]['name']} on {result[i]['bills'][j]['date']} amount:${result[i]['bills'][j]['amount']}\n{result[i]['bills'][j]['note']}\n")
             file.write(f"Total bills:${result[i]['totalBills']}\n")
-            file.write(f"Over amount: {result[i]['overAmount']}\n")
+            file.write(f"Over amount:${result[i]['overAmount']}\n" if result[i]['overAmount'] != "none" else "No over amount\n")
             file.write("___________________________________________\n\n\n")
         file.close()
         #this print statement will help with letting the user know the information has been saved in the file
