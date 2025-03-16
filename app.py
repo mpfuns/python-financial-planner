@@ -1,4 +1,7 @@
+# This program will help with organizing the bills and checks for the user
+#import numberHandler class from classesFunctions file
 from classesFunctions import NumberHandler
+#import the following libraries to help with the program datetime, timedelta, and re
 from datetime import datetime, timedelta
 import re
 # This  varible will help with storing the information from the user
